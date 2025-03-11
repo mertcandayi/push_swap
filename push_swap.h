@@ -22,8 +22,8 @@ typedef struct  s_list
     struct s_list *next;
 } t_list;
 
-void    sa(t_list *a);
-void    sa(t_list *b);
+void    sa(t_list *a, int print);
+void    sa(t_list *b, int print);
 void    ss(t_list *a, t_list *b);
 
 t_list  *ft_lstnew(int data);

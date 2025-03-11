@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-void    sa(t_list *a)
+void    sa(t_list *a, int print)
 {
     int tmp;
     size_t size;
@@ -23,27 +23,30 @@ void    sa(t_list *a)
         tmp = a->data;
         a->data = a->next->data;
         a->next->data = tmp;
-        write(1, "sa\n", 3);
+        if (print == 1)
+            write(1, "sa\n", 3);
     }
 }
 
-void    sb(t_list *b)
+void    sb(t_list *b, int print)
 {
     int tmp;
     size_t size;
 
-    size = ft_lstsize(a);
+    size = ft_lstsize(b);
     if(size > 1)
     {
         tmp = b->data;
         b->data = b->next->data;
         b->next->data = tmp;
-        write(1, "sb\n", 3);
+        if (print == 1)
+            write(1, "sb\n", 3);
     }
 }
 
 void    ss(t_list *a, t_list *b)
 {
-    sa(a);
-    sb(b);
+    sa(a, 0);
+    sb(b, 0);
+    write(1, "ss\n", 3);
 }
