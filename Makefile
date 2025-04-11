@@ -1,22 +1,23 @@
-NAME    =       push_swap
-CC      =       cc
-CFLAGS  =       -Wall -Wextra -Werror
+NAME	=	push_swap
+CC	=	cc
+CFLAGS	=	-Wall -Wextra -Werror
 
-SRCS    =       push_swap.c action.c action2.c list_utils.c
-OBJS    =       $(SRCS:.c=.o)
+SRCS	=	push_swap.c push.c swap.c rotate.c \
+				reverse_rotate.c utils.c sort.c \
+				list_utils.c
+OBJS	=	$(SRCS:.c=.o)
 
-all:    $(NAME)
+all:	$(NAME)
 
-$(NAME):        $(SRCS)
-        @$(CC) $(CFLAGS) $(SRCS) -o push_swap
-		clean
+$(NAME):	$(OBJS)
+	@$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 
 clean:
-        @rm -f $(OBJS)
+	@rm -f $(OBJS)
 
-fclean: clean
-        @rm -f $(NAME)
+fclean:	clean
+	@rm -f $(NAME)
 
-re:     fclean all
+re:	fclean all
 
-.PHONY: all clean fclean re
+.PHONY: clean fclean re
