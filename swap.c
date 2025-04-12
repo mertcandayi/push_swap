@@ -37,12 +37,12 @@ void	sb(t_stack **stack_b, int print)
 	temp->next = (*stack_b)->next;
 	(*stack_b)->next = temp;
 	if (print)
-		write (1, "sb\n", 3);
+		write(1, "sb\n", 3);
 }
 
 void	ss(t_stack **stack_a, t_stack **stack_b)
 {
 	sa(stack_a, 0);
 	sb(stack_b, 0);
-	write (1, "ss\n", 3);
+	write(1, "ss\n", 3);
 }

@@ -27,7 +27,7 @@ void	pa(t_stack **stack_a, t_stack **stack_b)
 
 void	pb(t_stack **stack_a, t_stack **stack_b)
 {
-	t_stack	*temp;
+	t_stack *temp;
 
 	if (!*stack_a)
 		return ;
@@ -35,5 +35,5 @@ void	pb(t_stack **stack_a, t_stack **stack_b)
 	*stack_a = (*stack_a)->next;
 	temp->next = *stack_b;
 	*stack_b = temp;
-    write(1, "pb\n", 3);
+	write(1, "pb\n", 3);
 }

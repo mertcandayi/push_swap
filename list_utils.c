@@ -67,4 +67,3 @@ int	ft_lstsize(t_stack *stack)
 	}
 	return (size);
 }
-
