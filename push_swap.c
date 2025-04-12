@@ -68,7 +68,7 @@ void	free_stack(t_stack **stack)
 
 int	parse_args(int argc, char **argv, t_stack **stack_a)
 {
-	int i;
+	int	i;
 
 	*stack_a = NULL;
 	if (argc < 2)
@@ -97,9 +97,6 @@ int	main(int argc, char **argv)
 		ft_error();
 		return (1);
 	}
-	/*
-        algo
-    */
 	free_stack(&stack_a);
 	free_stack(&stack_b);
 	return (0);

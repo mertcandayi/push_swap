@@ -45,7 +45,6 @@ int					ft_isdigit(int c);
 long				ft_atol(const char *str);
 int					ft_is_valid_integer(char *str);
 int					ft_has_duplicate(t_stack *stack, int num);
-char				*ft_get_word(char const *s, char c, int *index);
 char				**ft_split(char const *s, char c);
 void				ft_free_split(char **split);
 int					add_number_to_stack(t_stack **stack_a, int num);

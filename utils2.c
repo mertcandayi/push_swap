@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-char	*ft_get_word(char const *s, char c, int *index)
+static char	*ft_get_word(char const *s, char c, int *index)
 {
 	int		len;
 	int		i;
@@ -37,12 +37,10 @@ char	*ft_get_word(char const *s, char c, int *index)
 	return (word);
 }
 
-char	**ft_split(char const *s, char c)
+static int	ft_count_words(char const *s, char c)
 {
-	char	**result;
-	int		count;
-	int		i;
-	int		j;
+	int	count;
+	int	i;
 
 	count = 0;
 	i = 0;
@@ -52,6 +50,17 @@ char	**ft_split(char const *s, char c)
 			count++;
 		i++;
 	}
+	return (count);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**result;
+	int		count;
+	int		i;
+	int		j;
+
+	count = ft_count_words(s, c);
 	result = (char **)malloc(sizeof(char *) * (count + 1));
 	if (!result)
 		return (NULL);
@@ -70,7 +79,7 @@ char	**ft_split(char const *s, char c)
 
 void	ft_free_split(char **split)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (split[i])
