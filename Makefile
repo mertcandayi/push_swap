@@ -4,7 +4,7 @@ CFLAGS	=	-Wall -Wextra -Werror
 
 SRCS	=	push_swap.c push.c swap.c rotate.c \
 				reverse_rotate.c utils.c utils2.c \
-				sort.c list_utils.c error_control.c
+				sort.c list_utils.c ft_error.c
 OBJS	=	$(SRCS:.c=.o)
 
 all:	$(NAME)
