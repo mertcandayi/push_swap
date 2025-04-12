@@ -97,6 +97,8 @@ int	main(int argc, char **argv)
 		ft_error();
 		return (1);
 	}
+	if (!is_sorted(stack_a))
+		sort(&stack_a, &stack_b);
 	free_stack(&stack_a);
 	free_stack(&stack_b);
 	return (0);
