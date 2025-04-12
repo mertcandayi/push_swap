@@ -85,3 +85,22 @@ int	parse_args(int argc, char **argv, t_stack **stack_a)
 	}
 	return (1);
 }
+
+int	main(int argc, char **argv)
+{
+	t_stack	*stack_a;
+	t_stack	*stack_b;
+
+	stack_b = NULL;
+	if (!parse_args(argc, argv, &stack_a))
+	{
+		ft_error();
+		return (1);
+	}
+	/*
+        algo
+    */
+	free_stack(&stack_a);
+	free_stack(&stack_b);
+	return (0);
+}
